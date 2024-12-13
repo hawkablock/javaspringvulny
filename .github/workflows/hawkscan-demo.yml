@@ -38,7 +38,7 @@ jobs:
           distribution: 'temurin' # See 'Supported distributions' for available options
           java-version: '17'
       - name: Build and run JavaSpringVulny (Docker)
-        run: docker compose up --detach
+        run: docker compose up --detach --quiet-pull
       - name: Run HawkScan
         env:
           HAWK_ENV: GitHub Actions
